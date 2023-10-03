@@ -1,0 +1,7 @@
+<p>
+  demo1 works!
+</p>
+<button (click)="myfun()">Click me</button> <br> <br>
+<input type="text" placeholder="enter your name" (keyup)="myfun(keyup.value)" #keyup>
+<br><br>
+<input type="text" placeholder="Key down event" #keydown (keydown)="(myfun(keydown.value))">

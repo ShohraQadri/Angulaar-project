@@ -1,0 +1,10 @@
+h1 {
+  text-align: center;
+  -webkit-text-stroke-color: red;
+  -webkit-text-stroke-width: 2px;
+  color: transparent;
+  border-bottom: 3px solid;
+  padding-bottom: 1rem;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, red, white);
+}
