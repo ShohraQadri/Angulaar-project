@@ -1,10 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   text-align: center;
-  -webkit-text-stroke-color: red;
+  -webkit-text-stroke-color: var(--ion-color-danger);
   -webkit-text-stroke-width: 2px;
   color: transparent;
   border-bottom: 3px solid;
-  padding-bottom: 1rem;
+  padding: 1rem;
   border-image-slice: 1;
   border-image-source: linear-gradient(to right, red, white);
+  font-size: 3rem;
+}
+
+ion-content.bg-img {
+  background-image: url(../../assets/background-img.jpeg);
+  background-size: cover;
+  /* Adjust as needed */
+  background-position: center;
+  /* Adjust as needed */
+  background-repeat: no-repeat;
+  --background: transparent !important;
+  margin-top: 0.5rem;
+}
+
+h2 {
+  padding: 1rem;
 }

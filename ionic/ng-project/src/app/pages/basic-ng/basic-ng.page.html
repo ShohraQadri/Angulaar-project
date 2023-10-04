@@ -1,6 +1,5 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-back-button defaultHref="/home"></ion-back-button>
     <ion-title>basic-ng</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,4 +10,17 @@
       <ion-title size="large">basic-ng</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div class="cnt-pnl">
+    <form action="">
+      <input type="text" placeholder="enter your name" #box1 (keyup)="myfun(box1.value)"> <br> <br>
+      <input type="text" placeholder="enter your name" #box2 (keydown)="myfun(box2.value)"> <br> <br>
+      <button (click)="myfun('hello')">Click me</button>
+    </form>
+  </div>
 </ion-content>
+
+<ion-fab vertical="bottom" horizontal="end">
+  <ion-fab-button>
+    <ion-back-button defaultHref="/home"></ion-back-button>
+  </ion-fab-button>
+</ion-fab>

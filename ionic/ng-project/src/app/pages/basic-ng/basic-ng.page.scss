@@ -1,0 +1,22 @@
+ion-content {
+    --padding-start: 1rem;
+}
+
+ion-header {
+    text-align: center;
+
+}
+
+ion-title {
+    color: var(--ion-color-success);
+    font-size: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.cnt-pnl {
+    border: 2px solid;
+    width: 50%;
+    margin: auto;
+    padding: 1rem;
+}

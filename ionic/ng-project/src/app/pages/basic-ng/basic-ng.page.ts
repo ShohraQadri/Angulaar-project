@@ -11,5 +11,7 @@ export class BasicNgPage implements OnInit {
 
   ngOnInit() {
   }
-
+  myfun(val: any) {
+    console.warn(val)
+  }
 }
