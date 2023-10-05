@@ -11,7 +11,17 @@ export class BasicNgPage implements OnInit {
 
   ngOnInit() {
   }
+  displayval: any = '';
   myfun(val: any) {
     console.warn(val)
+    this.displayval = val;
+  }
+  count = 0;
+  counter(type: string) {
+    type === 'add' ? this.count++ : this.count--;
+  }
+  color = "red";
+  myclr() {
+    this.color = "green"
   }
 }

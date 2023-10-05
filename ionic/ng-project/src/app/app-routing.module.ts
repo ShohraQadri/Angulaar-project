@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'todo-list',
     loadChildren: () => import('./pages/todo-list/todo-list.module').then(m => m.TodoListPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
 ];
 
 @NgModule({

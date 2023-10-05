@@ -12,9 +12,26 @@
   </ion-header>
   <div class="cnt-pnl">
     <form action="">
-      <input type="text" placeholder="enter your name" #box1 (keyup)="myfun(box1.value)"> <br> <br>
-      <input type="text" placeholder="enter your name" #box2 (keydown)="myfun(box2.value)"> <br> <br>
+      <input type="text" placeholder="Keyup event..." #box1>
+      <button (click)="myfun(box1.value)">Click me</button>
+      <br>
+      <p>value :{{displayval}}</p>
+
+      <input type="text" placeholder="Keydown event..." #box2 (keydown)="myfun(box2.value)"> <br> <br>
+      <input type="text" placeholder="Blue event..." #box3 (blur)="myfun(box3.value)"> <br> <br>
+      <input type="text" placeholder="Input event..." #box4 (input)="myfun(box4.value)"> <br> <br>
       <button (click)="myfun('hello')">Click me</button>
+      <h2>
+        ********* Counter *********
+      </h2>
+      <button (click)="counter('add')">Add</button>
+      <p>{{count}}</p>
+      <button (click)="counter('sub')">Sub</button>
+
+      <h3>******** style binding ***********</h3>
+
+      <h4 [style.color]="color">Shohra Qadri</h4> <br>
+      <button (click)="myclr()">Change color</button>
     </form>
   </div>
 </ion-content>
