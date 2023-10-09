@@ -11,5 +11,7 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
-
+  myform(){
+console.warn('hii')
+  }
 }
