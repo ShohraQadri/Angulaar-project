@@ -1,4 +1,3 @@
-
 ion-content.form-pnl {
     border: 2px solid;
 
@@ -8,13 +7,19 @@ ion-content.form-pnl {
     margin: 2rem auto;
     border: 2px solid RED;
     width: 60%;
- 
+
 }
-ion-button{
+
+ion-button {
     width: 4rem;
 }
-ion-col{
+
+ion-col {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.item-inner {
+    align-items: center;
 }

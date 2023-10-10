@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,13 +6,18 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
+  myform: any;
+  postData = {
+    username: '',
+    password: ''
+  };
   constructor() { }
 
   ngOnInit() {
-
   }
-  myform() {
-    console.warn('hii')
+  onClick(param: any) {
+    console.log("param === ", this.postData);
+
+
   }
 }

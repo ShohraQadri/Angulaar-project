@@ -1,0 +1,18 @@
+<ion-content [fullscreen]="true">
+  <div class="main-conatiner">
+    <div class="img-bar">
+      <ion-img src="assets/bg.jpg" style="width: 25rem; margin: 0 auto;"></ion-img>
+    </div>
+    <ion-title>
+      This is first page
+    </ion-title>
+    <ion-button shape="round">
+      Click me
+    </ion-button>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" style="margin-bottom:5rem">
+      <ion-fab-button [routerLink]="['/login']">
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </div>
+</ion-content>

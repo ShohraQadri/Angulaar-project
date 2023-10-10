@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true">
+
+  <div class="top-pnl">
+    <div class="login-container">
+      <ion-title>
+        Welcome Back
+      </ion-title>
+      <p>Sign into Access ypur account</p>
+    </div>
+    <form onlclick="myform">
+      <div class="ion-padding">
+        <ion-item>
+          <ion-input placeholder="Name" name="username" [(ngModel)]="postData.username"></ion-input>
+          <ion-icon name="person-outline"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Password"></ion-input>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+        </ion-item>
+        <div class="action-button ">
+          <ion-button class="login-btn" size="medium" (click)="onClick(myform)">Log in</ion-button>
+        </div>
+        <div class="pass">
+          <a [routerLink]="['/password']" style="color: rgb(168, 168, 7);">forget pasword?</a>
+        </div>
+
+        <div class="signup-field">
+          <p>
+            new member?
+            <a [routerLink]="['/signup']"> SignUp now</a>
+          </p>
+        </div>
+      </div>
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed" style="margin-bottom:5rem">
+        <ion-fab-button [routerLink]="['/login']">
+          <ion-icon name="chevron-forward"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+
+    </form>
+  </div>
+
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-content [fullscreen]="true">
+  <div class="main-cnt">
+    <div class="login-container">
+      <ion-title>
+        Welcome
+      </ion-title>
+      <p>Sign up to create your account</p>
+    </div>
+    <form>
+      <div class="ion-padding">
+        <ion-item>
+          <ion-input placeholder="Enter your  name"></ion-input>
+          <ion-icon name="person-outline"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Enter your Email"></ion-input>
+          <ion-icon name="mail-outline"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Enter your password"></ion-input>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+        </ion-item>
+        <div class="pass-cnt">
+          <a [routerLink]="['/password']" style="color: goldenrod;">forget pasword?</a>
+        </div>
+        <div class="sign-cnt">
+          <p>
+            Already a member ?
+            <a [routerLink]="['/login']"> SignIn now</a>
+          </p>
+        </div>
+      </div>
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed" style="margin-bottom:5rem">
+        <ion-fab-button [routerLink]="['/login']">
+          <ion-icon name="chevron-forward"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </form>
+  </div>
+
+</ion-content>
