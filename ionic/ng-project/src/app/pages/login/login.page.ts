@@ -7,13 +7,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  loginform: FormGroup | any
 
-  constructor() { }
+  constructor(
+    // public FormBuilder: FormBuilder;
+  ) { }
 
   ngOnInit() {
+    this.loginform
+  }
 
-  }
-  myform(item:any) {
-    console.warn(item.value)
-  }
 }

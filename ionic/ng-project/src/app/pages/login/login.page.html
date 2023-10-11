@@ -14,17 +14,18 @@
 
 <ion-content class="form-pnl">
   <div class="form-cnt">
-    <form #ngform (onsubmit)="myform(ngform)">
+    <form [formGroup]="loginform">
       <ion-item>
-        <ion-label position="floating">Email</ion-label>
-        <ion-input type="text" required placeholder="Enter your Email" ngModel>
+        <!-- <ion-label position="floating">Email</ion-label> -->
+        <ion-input type="text" required placeholder="Enter your Email" label="Email" labelPlacement="floating">
         </ion-input>
         <ion-icon name='person-outline' slot="end"></ion-icon>
       </ion-item>
 
       <ion-item class="ion-align-items-center">
-        <ion-label position="floating">Password</ion-label>
-        <ion-input type="password" required placeholder="Enter your password" ngModel ></ion-input>
+        <!-- <ion-label position="floating">Password</ion-label> -->
+        <ion-input type="password" required placeholder="Enter your password" label="password"
+          labelPlacement="floating"></ion-input>
         <ion-icon name="lock-open-outline" slot="end"></ion-icon>
 
       </ion-item>
