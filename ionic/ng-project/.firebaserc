@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ionic-angular-project-381c6": {
+      "hosting": {
+        "app": [
+          "ionic-angular-project-381c6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ionic-angular-project-381c6"
+  }
+}
