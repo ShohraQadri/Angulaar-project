@@ -1,5 +1,24 @@
-.main-cnt{
+.main-cnt {
     border: 2px solid;
     width: 60%;
     margin: 0 auto;
+    padding: 1rem;
+}
+
+ion-list {
+    margin: 0 !important;
+    font-family: 'Courier New', Courier, monospace;
+    --color: var(--ion-color-danger);
+    padding: 0 !important;
+}
+
+.custom-list-item {
+    color: var(--ion-color-danger);
+    // color: red !important;
+
+}
+
+ion-button {
+    padding-left: 1rem;
+    padding-top: 1rem;
 }

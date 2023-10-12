@@ -11,5 +11,14 @@ export class TodoListPage implements OnInit {
 
   ngOnInit() {
   }
+  inputValue: string = '';
+  list: any[] = [];
+  myfun() {
 
+    this.list.push({ id: this.list.length, name: this.inputValue });
+    console.log(this.list)
+  }
+  removebutton(id: number) {
+    alert('hii')
+  }
 }
