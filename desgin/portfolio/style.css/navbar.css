@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+nav {
+    height: min-content;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+ul li:hover {
+    border-bottom: 2px solid green;
+}
+
+ul li a {
+    color: #c8c6c6;
+    letter-spacing: 1px;
+    padding: 1rem;
+}
+
+.flex-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+.name-pnl {
+    padding: 1rem;
+}
