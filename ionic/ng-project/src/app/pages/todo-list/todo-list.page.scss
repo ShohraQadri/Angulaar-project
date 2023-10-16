@@ -22,3 +22,21 @@ ion-button {
     padding-left: 1rem;
     padding-top: 1rem;
 }
+
+.iconSize {
+    width: 2rem
+}
+
+.list-md.list-inset ion-item:last-child {
+    border-bottom: 2px solid var(--ion-color-warning);
+    justify-content: space-between;
+}
+
+ion-input::part(.input-wrapper) {
+    justify-content: space-between !important;
+}
+
+.eventbutton {
+    position: absolute;
+    right: 0;
+}
