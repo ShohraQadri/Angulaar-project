@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationExtras } from '@angular/router';
+import { ActivatedRoute, NavigationExtras } from '@angular/router';
 import { NavController, ToastController } from '@ionic/angular';
+ActivatedRoute;
 
 @Component({
   selector: 'app-todo-list',
@@ -8,10 +9,19 @@ import { NavController, ToastController } from '@ionic/angular';
   styleUrls: ['./todo-list.page.scss'],
 })
 export class TodoListPage implements OnInit {
-
-  constructor(private toastController: ToastController, private navCtrl: NavController) { }
+  constructor(
+    private toastController: ToastController,
+    private navCtrl: NavController,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
+    // Retrieve the data from the route parameters
+    this.route.paramMap.subscribe((params) => {
+      const name = params.get('name');
+      console.log('Received data on todo-list page: ', name);
+      // Now you can use 'name' in your component as needed.
+    });
   }
   inputValue: string = '';
   list: any[] = [];
@@ -29,13 +39,13 @@ export class TodoListPage implements OnInit {
       return;
     }
     this.list.push({ id: this.list.length, name: this.inputValue });
-    console.log(this.list)
+    console.log(this.list);
   }
   removebutton(id: number) {
-    console.warn(id)
-    this.list = this.list.filter(inputValue => inputValue.id !== id)
+    console.warn(id);
+    this.list = this.list.filter((inputValue) => inputValue.id !== id);
   }
-  editbutton(value: any, name: any) {
+  editbutton(value: any, name: any, index: any) {
     console.log(this.list);
     // let navigationExtras: NavigationExtras = {
     //   queryParams: {
@@ -43,7 +53,7 @@ export class TodoListPage implements OnInit {
     //   }
     // };
     this.navCtrl.navigateForward('/todo-list/update-todo', {
-      queryParams: { value, name }
+      queryParams: { value, name, index },
     });
     // this.isEdit = true;
     // const found = list.find((value) => element > 10);

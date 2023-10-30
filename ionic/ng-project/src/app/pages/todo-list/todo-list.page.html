@@ -16,7 +16,7 @@
       <ion-icon name='person-outline' slot="end"></ion-icon>
     </ion-item>
     <ion-button fill="outline" color="success align" (click)="myfun()">Submit</ion-button>
-    <ion-list inset *ngFor="let inputValue of list">
+    <ion-list inset *ngFor="let inputValue of list;  let i = index">
       <ion-item class="custom-list-item ion-align-items-center ">
         {{inputValue.name}}
         <!-- <div *ngIf="!isEdit">{{inputValue.name}}</div> -->
@@ -27,7 +27,7 @@
           <ion-button (click)="removebutton(inputValue.id)">
             <ion-icon name='trash-outline' class="iconSize"></ion-icon>
           </ion-button>
-          <ion-button (click)="editbutton(inputValue.id, inputValue.name)">
+          <ion-button (click)="editbutton(inputValue.id, inputValue.name,i)">
             <ion-icon name='create' class="iconSize"></ion-icon>
           </ion-button>
         </div>
