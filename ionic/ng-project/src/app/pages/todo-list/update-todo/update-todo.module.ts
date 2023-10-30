@@ -4,18 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TodoListPageRoutingModule } from './todo-list-routing.module';
+import { UpdateTodoPageRoutingModule } from './update-todo-routing.module';
 
-import { TodoListPage } from './todo-list.page';
-
+import { UpdateTodoPage } from './update-todo.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TodoListPageRoutingModule,
+    UpdateTodoPageRoutingModule
   ],
-  declarations: [TodoListPage]
+  declarations: [UpdateTodoPage]
 })
-export class TodoListPageModule { }
+export class UpdateTodoPageModule {}

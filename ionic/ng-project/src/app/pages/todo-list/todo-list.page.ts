@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ToastController } from '@ionic/angular';
+import { NavigationExtras } from '@angular/router';
+import { NavController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-todo-list',
@@ -8,7 +9,7 @@ import { ToastController } from '@ionic/angular';
 })
 export class TodoListPage implements OnInit {
 
-  constructor(private toastController: ToastController) { }
+  constructor(private toastController: ToastController, private navCtrl: NavController) { }
 
   ngOnInit() {
   }
@@ -36,6 +37,14 @@ export class TodoListPage implements OnInit {
   }
   editbutton(value: any, name: any) {
     console.log(this.list);
+    // let navigationExtras: NavigationExtras = {
+    //   queryParams: {
+    //     special: JSON.stringify({})
+    //   }
+    // };
+    this.navCtrl.navigateForward('/todo-list/update-todo', {
+      queryParams: { value, name }
+    });
     // this.isEdit = true;
     // const found = list.find((value) => element > 10);
     // this.inputName = name;

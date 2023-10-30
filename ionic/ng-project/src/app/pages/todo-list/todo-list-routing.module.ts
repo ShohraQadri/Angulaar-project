@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: TodoListPage
+  },
+  {
+    path: 'update-todo',
+    loadChildren: () => import('./update-todo/update-todo.module').then( m => m.UpdateTodoPageModule)
   }
 ];
 
