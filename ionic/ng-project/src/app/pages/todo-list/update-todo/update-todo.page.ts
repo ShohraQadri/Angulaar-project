@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { ModalController, NavController, NavParams } from '@ionic/angular';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -14,51 +14,22 @@ export class UpdateTodoPage implements OnInit {
   updateName: any;
   // isEdit: any = false;
   inputName: any;
-
+  dataFromParent: any;
   constructor(
-    private navCtrl: NavController,
-    private route: ActivatedRoute,
-    private router: Router
+    private navParams: NavParams,
+    private modalController: ModalController
   ) {
-    this.route.queryParams.subscribe((params) => {
-      console.log('params === ', params, params['name']);
-      this.inputValue = params['name'];
-    });
+    this.dataFromParent = this.navParams.get('data');
+    console.log('this.dataFromParent === ', this.dataFromParent);
+    this.inputValue = this.dataFromParent.name;
   }
 
   ngOnInit() {}
 
-  async myfun() {
-    if (this.inputValue == '' || this.inputValue == undefined) {
-      const toast = await this.toastController.create({
-        message: 'please fill the input field!',
-        duration: 1500,
-        position: 'bottom',
-      });
-
-      await toast.present();
-      return;
-    }
-    this.list.push({ id: this.list.length, name: this.inputValue });
-    console.log(this.list);
-  }
-  removebutton(id: number) {
-    console.warn(id);
-    this.list = this.list.filter((inputValue) => inputValue.id !== id);
-  }
-  editbutton(value: any, name: any) {
-    console.log(this.list);
-
-    this.navCtrl.navigateForward('/todo-list/update-todo', {
-      queryParams: { value, name },
-    });
-  }
   update(name: any) {
-    // console.log(name);
-    this.updateName = name;
-    console.log('updateName === ', this.updateName);
-    // this.inputValue[this.]
+    console.log('updateName === ', this.inputValue);
+    this.dataFromParent['name'] = this.inputValue;
     console.log('clicked');
-    this.router.navigate(['/todo-list', { name: this.updateName }]);
+    this.modalController.dismiss(this.dataFromParent);
   }
 }
