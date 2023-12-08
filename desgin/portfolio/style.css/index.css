@@ -1,174 +1,223 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 iframe {
-    height: 6rem;
+  height: 6rem;
 }
 
 body {
-    margin: 0;
-    color: white;
-    background-color: black;
-
+  margin: 0;
+  color: white;
+  background-color: black;
 }
 
 @keyframes moveRight {
-    0% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
+  }
 
-    50% {
-        transform: translateX(150px);
-        /* Mid-state */
-    }
+  50% {
+    transform: translateX(150px);
+    /* Mid-state */
+  }
 
-    100% {
-        transform: translateX(0);
-        /* Final state */
-    }
+  100% {
+    transform: translateX(0);
+    /* Final state */
+  }
 }
 
 .fadein {
-    text-transform: uppercase;
-    font-size: 50px;
-    margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-bottom: 1rem;
 }
 
 .top-bar {
-    display: flex;
-    padding: 0 0 0 2rem;
-    background-image: url(../assets/wlc-bg1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: contain;
+  display: flex;
+  padding: 0 0 0 2rem;
+  background-image: url(../assets/wlc-bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
 }
+
 h2,
 h1 {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    letter-spacing: -2px;
-    word-spacing: 10px;    font-size: 38px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  letter-spacing: -2px;
+  word-spacing: 10px;
+  font-size: 38px;
 }
 
 .top-bar .contetn-pnl {
-    flex: 2;
-    flex-grow: 1;
-    padding: 6rem 0 2rem;
-    animation: moveRight 2s ease infinite;
-
-
+  flex: 2;
+  flex-grow: 1;
+  padding: 6rem 0 2rem;
+  animation: moveRight 2s ease infinite;
 }
 
 .top-bar.reverse .contetn-pnl {
-    animation: none;
-    margin-left: -2rem;
-    padding-right: 2rem;
+  animation: none;
+  margin-left: -2rem;
+  padding-right: 2rem;
 }
 
 .top-bar .img-wrappper {
-    flex: 1;
-    flex-grow: 1;
+  flex: 1;
+  flex-grow: 1;
 }
 
 .top-bar .img-wrappper img {
-    float: right;
-    max-width: 100%;
-    width: 70%;
+  float: right;
+  max-width: 100%;
+  width: 70%;
 }
+
 .green {
-    color: #08d665;
+  color: #08d665;
 }
 
 .pera-pnl {
-    font-size: 20px;
-    font-weight: 400;
-    padding: 0rem 0 0rem 1rem;
-    border-left: 2px solid #08d665;
-    margin: 2rem 0;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0rem 0 0rem 1rem;
+  border-left: 2px solid #08d665;
+  margin: 2rem 0;
 }
 
 .top-bar a {
-    font-size: 15px;
-    font-weight: 400;
-    padding: 1rem;
-    text-transform: uppercase;
-    background-color: #08d665;
-    border-radius: 11px;
-    text-decoration: none;
-    color: white;
-    font-family: 'Rubik', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 1rem;
+  text-transform: uppercase;
+  background-color: #08d665;
+  border-radius: 11px;
+  text-decoration: none;
+  color: white;
+  font-family: "Rubik", sans-serif;
 }
 
 .top-bar a:hover {
-    border: 2px solid #08d665;
-    color: #08d665;
-    background-color: black;
+  border: 2px solid #08d665;
+  color: #08d665;
+  background-color: black;
 }
 
 .material-symbols-outlined {
-    border: 2px solid;
-    position: relative;
-    top: 5px;
-    background-color: white;
-    color: #08d665;
-    width: fit-content;
-    padding: 0.2rem;
-    border-radius: 8px;
-    margin-left: 1.5rem;
+  border: 2px solid;
+  position: relative;
+  top: 5px;
+  background-color: white;
+  color: #08d665;
+  width: fit-content;
+  padding: 0.2rem;
+  border-radius: 8px;
+  margin-left: 1.5rem;
 }
 
 .top-bar.reverse {
-    flex-direction: row-reverse;
-    background-image: url(../assets/fi);
-    position: relative;
+  flex-direction: row-reverse;
+  background-image: url(../assets/fi);
+  position: relative;
 }
 
 .reverse .img-wrappper img {
-    float: left;
-    width: 55%;
+  float: left;
+  width: 55%;
 }
 
 .reverse .img-wrappper::before {
-    content: "";
-    height: 100%;
-    background-image: url(../assets/about-shape.svg);
-    width: 100%;
-    background-repeat: no-repeat;
-    bottom: -16rem;
-    z-index: -1;
-    position: absolute;
+  content: "";
+  height: 100%;
+  background-image: url(../assets/about-shape.svg);
+  width: 100%;
+  background-repeat: no-repeat;
+  bottom: -16rem;
+  z-index: -1;
+  position: absolute;
 }
 
 .top-bar.reverse .pera-pnl {
-    line-height: 1.8;
-    border-left: none;
+  line-height: 1.8;
+  border-left: none;
 }
 
-.headingg-pnl {
-    margin-top: 5rem;
-    padding: 3rem 0 0 4rem;
-    text-transform: uppercase;
+.midde-pnl {
+  align-items: center;
 }
 
-.headingg-pnl .filltext {
-    font-size: 80px;
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 2px #171c1e;
-    position: absolute;
-    left: 4;
-    top: 0;
-    z-index: -1;
+.midde-pnl .headingg-pnl {
+  margin-top: 5rem;
+  padding: 3rem 0 0 4rem;
+  text-transform: uppercase;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.midde-pnl .headingg-pnl .filltext {
+  font-size: 87px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #171c1e;
+  position: absolute;
+  left: 4rem;
+  top: 6rem;
+  z-index: -1;
+}
+.ct-flex {
+  display: flex;
 }
 
 .relative {
-    position: relative;
+  position: relative;
 }
 
-.headingg-pnl small {
-    font-size: 25px;
-    line-height: 1.5;
+.midde-pnl .headingg-pnl small {
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+.thought-pnl {
+  flex: 1;
+  flex-grow: 1;
+  margin: auto;
+  font-size: 32px;
+  margin-top: 7rem;
+  border-left: 2px solid #08d665;
+  padding-left: 1rem;
+  text-transform: uppercase;
+}
+
+.Experience-pnl {
+  border: 2px solid red;
+  margin-top: 3rem;
+  margin: 3rem 4rem 0 4rem;
+  gap: 2rem;
+}
+
+.thired-exp,
+.second-exp,
+.first-exp {
+  flex: 1;
+  flex-grow: 1;
+  border: 2px solid green;
+  padding: 1rem;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.thired-exp h4,
+.second-exp h4,
+.first-exp h4{
+    font-size: 26px;
+}
+.thired-exp:hover,
+.second-exp:hover,
+.first-exp:hover{
+    margin-top: -1.5rem;
+    background-color: #131617;
 }
