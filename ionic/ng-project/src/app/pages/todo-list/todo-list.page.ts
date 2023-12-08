@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationExtras } from '@angular/router';
-import { NavController, ToastController } from '@ionic/angular';
-ActivatedRoute;
+import {
+  ModalController,
+  NavController,
+  ToastController,
+} from '@ionic/angular';
+
+import { UpdateTodoPage } from './update-todo/update-todo.page';
 
 @Component({
   selector: 'app-todo-list',
@@ -12,7 +17,8 @@ export class TodoListPage implements OnInit {
   constructor(
     private toastController: ToastController,
     private navCtrl: NavController,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private modalController: ModalController
   ) {}
 
   ngOnInit() {
@@ -45,20 +51,18 @@ export class TodoListPage implements OnInit {
     console.warn(id);
     this.list = this.list.filter((inputValue) => inputValue.id !== id);
   }
-  editbutton(value: any, name: any, index: any) {
+  async editbutton(value: any, name: any, index: any) {
     console.log(this.list);
-    // let navigationExtras: NavigationExtras = {
-    //   queryParams: {
-    //     special: JSON.stringify({})
-    //   }
-    // };
-    this.navCtrl.navigateForward('/todo-list/update-todo', {
-      queryParams: { value, name, index },
+
+    const modal = await this.modalController.create({
+      component: UpdateTodoPage,
+      componentProps: { data: { value, name, index } },
     });
-    // this.isEdit = true;
-    // const found = list.find((value) => element > 10);
-    // this.inputName = name;
-    // console.log("inputValue === ", value);
-    // console.warn('hii')
+    modal.onDidDismiss().then((data) => {
+      console.log('updated data === ', data);
+      let newdata = data.data;
+      this.list[newdata['index']]['name'] = newdata['name'];
+    });
+    await modal.present();
   }
 }
