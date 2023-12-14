@@ -42,6 +42,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: contain;
+  align-items: center;
 }
 
 h2,
@@ -69,12 +70,13 @@ h1 {
 .top-bar .img-wrappper {
   flex: 1;
   flex-grow: 1;
+  text-align: right;
+  padding-top: 2rem;
 }
 
 .top-bar .img-wrappper img {
-  float: right;
   max-width: 100%;
-  width: 70%;
+  width: 50%;
 }
 
 .green {
@@ -138,6 +140,7 @@ h1 {
   background-repeat: no-repeat;
   bottom: -16rem;
   z-index: -1;
+  left: 0;
   position: absolute;
 }
 
@@ -169,6 +172,7 @@ h1 {
   top: 6rem;
   z-index: -1;
 }
+
 .ct-flex {
   display: flex;
 }
@@ -210,14 +214,16 @@ h1 {
   font-size: 15px;
   line-height: 1.5;
 }
+
 .thired-exp h4,
 .second-exp h4,
-.first-exp h4{
-    font-size: 26px;
+.first-exp h4 {
+  font-size: 26px;
 }
+
 .thired-exp:hover,
 .second-exp:hover,
-.first-exp:hover{
-    margin-top: -1.5rem;
-    background-color: #131617;
+.first-exp:hover {
+  margin-top: -1.5rem;
+  background-color: #131617;
 }
