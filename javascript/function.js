@@ -24,7 +24,7 @@ const user = {
     number: 9089876544,
 }
 function handelobject(anyobject) {
-    console.log(`user name is ${anyobject.name} and numberis ${anyobject.number} and age is ${anyobject.age}`);
+    // console.log(`user name is ${anyobject.name} and numberis ${anyobject.number} and age is ${anyobject.age}`);
 
 }
 // console.log(user);
@@ -33,3 +33,15 @@ handelobject({
     age: 23,
     number: 9089876544,
 })
+
+function one(){
+const username = "shohra";
+
+function two(){
+    const fullname = "qadri"
+    console.log(username);
+}
+two()
+// console.log(fullname);
+}
+one()
