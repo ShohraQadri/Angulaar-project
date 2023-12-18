@@ -198,10 +198,9 @@ h1 {
 }
 
 .Experience-pnl {
-  border: 2px solid red;
   margin-top: 3rem;
-  margin: 3rem 4rem 0 4rem;
-  gap: 2rem;
+  margin: 5rem 4rem 0 4rem;
+  gap: 1rem;
 }
 
 .thired-exp,
@@ -226,4 +225,63 @@ h1 {
 .first-exp:hover {
   margin-top: -1.5rem;
   background-color: #131617;
+}
+ul {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+ul li {
+  padding-bottom: 0.5rem;
+}
+
+.circle-container {
+  margin: 5rem 7rem 2rem 6rem;
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.circle1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 12px solid white;
+  border-top-color: #08d665;
+  border-right-color: #08d665;
+  border-left-color: #08d665;
+  margin-bottom: 1.5rem;
+}
+.circle2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 12px solid white;
+  border-top-color: #08d665;
+  border-right-color: #08d665;
+  border-left-color: #08d665;
+  margin-bottom: 1.5rem;
+
+}
+.circle3 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 12px solid white;
+  border-top-color: #08d665;
+  border-right-color: #08d665;
+  border-left-color: #08d665;
+  margin-bottom: 1.5rem;
+
+}
+.circle4 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 12px solid white;
+  border-top-color: #08d665;
+  border-right-color: #08d665;
+  border-left-color: #08d665;
+  margin-bottom: 1.5rem;
+
 }
