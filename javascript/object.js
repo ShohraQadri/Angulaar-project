@@ -55,4 +55,5 @@ const Array = [
         id: 1230
     },
 ]
-console.log(Object.values(Array));
+// console.log(Object.values(Array));
+
