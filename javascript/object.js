@@ -1,3 +1,11 @@
+
+const user1 = {
+    name: "shohra",
+    email: "qadri@gmail.com",
+    'no': "908765"
+}
+// console.log(user1['no']);
+
 const mysum = Symbol("keysymbol")
 
 const user = {
