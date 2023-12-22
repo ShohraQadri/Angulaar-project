@@ -64,6 +64,6 @@ const languages = [
 ]
 
 languages.forEach((items) => {
-    console.log(items.languageName);
-    console.log(items.shortcutName);
+    // console.log(items.languageName);
+    // console.log(items.shortcutName);
 })
