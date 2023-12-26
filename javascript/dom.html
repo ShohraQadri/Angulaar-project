@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="language">
+        <ul>
+            <li>
+                Javascript
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "months"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.style.color = "#fff"
+    div.style.backgroundColor = "#212121"
+    // div.innerHTML = "Shohra qadri"
+    const addtext = document.createTextNode("My name is Qadri;")
+    div.append(addtext)
+    document.body.append(div)
+
+
+
+    function addlanguage(languageName) {
+        const li = document.createElement('li');
+        li.innerHTML = `${languageName}`
+        document.querySelector('.language').
+            appendChild(li)
+    }
+    addlanguage('python');
+    addlanguage('java');
+    addlanguage('react');
+
+    function newlanguage(languageName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(languageName))
+        document.querySelector('.language').appendChild(li)
+    }
+    thiredlang("mongo-db")
+
+
+    // const thiredli = document.querySelector("li:nth-chiled(3)")
+    // console.log(thiredli);
+    // const newli = document.createElement('li')
+    // newli.textContent = "SQL-database"
+    // thiredli.replaceWith(newli)
+
+    const lastlang = document.querySelector("li:last-chiled")
+    console.log(lastlang);
+    lastlang.remove()
+</script>
+
+</html>
