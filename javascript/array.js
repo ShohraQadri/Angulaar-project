@@ -12,7 +12,7 @@ const myarr = ["qadri", "a", "b", "g", "s", "h"];
 // console.log(myarr);
 
 // ********* splice ye main array ke print krayenge agr to jo range di thi  ye main array ke us data ke us range ko neglact kr dega balki slic asa ni krta h 
-const mynewarr2 = myarr.splice(1, 4);
+const mynewarr2 = myarr.splice(1, 2);
 console.log(mynewarr2);
 console.log(myarr);
 
